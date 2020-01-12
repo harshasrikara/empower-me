@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <Card></Card>
+  <div class="container">
+    <template v-for="index in 10">
+      <Card :key="index"></Card>
+    </template>
+    <!-- <Card></Card>
+    <Card></Card> -->
   </div>
 </template>
 
@@ -19,6 +23,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 h3 {
   margin: 40px 0 0;
 }
