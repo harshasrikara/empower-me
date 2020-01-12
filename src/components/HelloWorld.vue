@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <template v-for="index in 10">
-      <Card :key="index"></Card>
+      <Card class="card" :key="index"></Card>
     </template>
   </div>
 </template>
@@ -25,6 +25,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.card {
+  padding-bottom: 15px;
 }
 h3 {
   margin: 40px 0 0;

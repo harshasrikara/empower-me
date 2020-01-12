@@ -3,12 +3,12 @@
     <md-card md-with-hover>
       <md-ripple>
         <md-card-header>
-          <div class="md-title">Card with hover effect</div>
+          <div class="md-title">Item</div>
         </md-card-header>
 
         <md-card-content>
           <img :src="`https://picsum.photos/seed/${Math.random()}200/300`" />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+          {{ description }}
         </md-card-content>
 
         <md-card-actions>
@@ -23,9 +23,16 @@
 <script>
 /* eslint-disable */
 export default {
+  data() {
+    return {
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.',
+      amount: 10
+    }
+  },
   methods: {
     async payClicked() {
-      const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
+     const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/stripe/?description=${this.description}&amount=${this.amount}`
+     // const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
       const response = await fetch(url)
       console.log(response)
       const json = await response.json()
