@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Card></Card>
+      <!-- <div v-for="index in 10"> -->
+        <Card>index</Card>
+      <!-- </div> -->
   </div>
 </template>
 
