@@ -30,13 +30,15 @@ export default {
     }
   },
   methods: {
-    async payClicked() {
-     const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/stripe/?description=${this.description}&amount=${this.amount}`
-     // const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
-      const response = await fetch(url)
-      console.log(response)
-      const json = await response.json()
-      console.log(json)
+    payClicked() {
+      this.$emit('pay-clicked', async () => {
+        const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/stripe/?description=${this.description}&amount=${this.amount}`
+        // const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
+        const response = await fetch(url)
+        console.log(response)
+        const json = await response.json()
+        console.log(json)
+      })
     }
   }
 }

@@ -2,18 +2,38 @@
   <div id="app">
     <Header></Header>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld @pay-clicked="payClicked" msg="Welcome to Your Vue.js App"/>
+    <Modal v-if="showModal" @close="modalClose" ></Modal>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import Header from './components/Header'
+import Modal from './components/Modal'
 export default {
+  /* eslint-disable */
   name: 'app',
   components: {
     HelloWorld,
-    Header
+    Header,
+    Modal
+  },
+  data() {
+    return  {
+      showModal: false,
+      callback: function() {}
+    }
+  },
+  methods: {
+    payClicked(callback) {
+      this.showModal = true
+      this.callback = callback
+    },
+    modalClose() {
+      this.showModal = false
+      this.callback()
+    }
   }
 }
 </script>

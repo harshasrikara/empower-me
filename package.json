@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/cli": "^4.1.2",
     "core-js": "^3.4.4",
+    "vfc": "^2.0.0",
     "vue": "^2.6.10",
     "vue-material": "^1.0.0-beta-11",
     "vue-router": "^3.1.3"

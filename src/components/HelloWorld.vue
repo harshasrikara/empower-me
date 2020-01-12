@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <template v-for="index in 10">
-      <Card class="card" :key="index"></Card>
+      <Card class="card" :key="index" @pay-clicked="payClicked"></Card>
     </template>
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
   },
   components: {
     Card
+  },
+  methods: {
+    payClicked(callback) {
+      this.$emit('pay-clicked', callback)
+    }
   }
 };
 </script>
