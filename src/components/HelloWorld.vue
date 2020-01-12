@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <template v-for="index in 10">
-      <Card class="card" :key="index" @pay-clicked="payClicked"></Card>
+      <Card class="card" :key="index" @more-info-clicked="$emit('open-modal')" @pay-clicked="payClicked"></Card>
     </template>
   </div>
 </template>
@@ -10,15 +10,12 @@
 import Card from "./Card";
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String
-  },
   components: {
     Card
   },
   methods: {
     payClicked(callback) {
-      this.$emit('pay-clicked', callback)
+      this.$emit('open-modal', callback)
     }
   }
 };

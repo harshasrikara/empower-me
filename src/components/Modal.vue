@@ -1,33 +1,20 @@
-<template>
-<transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
+<template lang="pug">
+transition(name='modal')
+  .modal-mask
+    .modal-wrapper
+      .modal-container
+        .modal-header
+          slot(name="header") Confirm Payment
+        .modal-body
+          slot(name='body')
+            form.form
+              .test(v-for='(formItem, index) in formItems' :key='index')
+                vue-input(type='text' :placeholder='formItem' :key='formItem' :name='formItem')
+                  br(:key='index')
+        .modal-footer
+          slot(name="footer")
+            vue-button.okButton(type='success' @click='buttonClicked') OK
 
-          <div class="modal-header">
-            Confirm Payment
-          </div>
-
-          <div class="modal-body">
-            <form class="form">
-                <div class="test" v-for="(formItem, index) in formItems" :key="index">
-                    <!-- <span class="test2">{{ `${formItem}:` }}</span> -->
-                    <vue-input type="text" :placeholder="formItem" :key="formItem" :name="formItem"><br :key="index"> </vue-input>
-                </div>
-                <!-- Email:<br>
-                <input type="text" name="email"><br>
-                Email:<br>
-                <input type="text" name="email"><br> -->
-            </form>
-          </div>
-
-          <div class="modal-footer">
-            <vue-button class="okButton" type="success" @click="buttonClicked">OK</vue-button>
-          </div>
-        </div>
-      </div>
-    </div>
-</transition>
 </template>
 
 <script>
@@ -35,7 +22,6 @@ export default {
     methods: {
         buttonClicked() {
             this.$emit('close')
-            // this.$emit('pay')
         }
     },
     data() {

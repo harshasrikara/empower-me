@@ -12,7 +12,7 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button>More Info</md-button>
+          <md-button @click="$emit('more-info-clicked')">More Info</md-button>
           <md-button @click="payClicked()">Pay</md-button>
         </md-card-actions>
       </md-ripple>

@@ -1,10 +1,9 @@
-<template>
-  <div id="app">
-    <Header></Header>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld @pay-clicked="payClicked" msg="Welcome to Your Vue.js App"/>
-    <Modal v-if="showModal" @close="modalClose" ></Modal>
-  </div>
+<template lang="pug">
+#app
+  Header
+  img(alt='Vue logo' src='./assets/logo.png')
+  hello-world(@open-modal='openModal')
+  Modal(v-if='showModal' @close='modalClose')
 </template>
 
 <script>
@@ -26,9 +25,12 @@ export default {
     }
   },
   methods: {
-    payClicked(callback) {
+    openModal(callback) {
+      console.log('open')
       this.showModal = true
-      this.callback = callback
+      if (callback && typeof callback === 'function') {
+        this.callback = callback
+      }
     },
     modalClose() {
       this.showModal = false

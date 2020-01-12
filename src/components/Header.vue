@@ -1,12 +1,16 @@
 <template>
     <div class="header">
         <h1 class="firstLink">Text</h1>
+        <progress-bar size="medium" val="60" text="60"></progress-bar>
     </div>
 </template>
 
 <script>
+import ProgressBar from 'vue-simple-progress'
 export default {
-    
+    components: {
+        ProgressBar
+    }
 }
 </script>
 
