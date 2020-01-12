@@ -1,9 +1,9 @@
 
 <template>
-    <div class="header">
-        <vue-button class="firstLink">About</vue-button>
-        <progress-bar size="medium" val="60" text="60"></progress-bar>
-    </div>
+  <div class="header">
+      <vue-button class="firstLink">About</vue-button>
+      <progress-bar size="medium" val="60" text="60"></progress-bar>
+  </div>
 </template>
 
 <script>

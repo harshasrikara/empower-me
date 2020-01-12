@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <template v-for="index in 10">
-      <Card class="card" :key="index" @more-info-clicked="$emit('open-modal')" @pay-clicked="payClicked"></Card>
+      <Card class="card" :key="index" @more-info-clicked="btnClicked" @pay-clicked="btnClicked"></Card>
     </template>
   </div>
 </template>
@@ -14,8 +14,8 @@ export default {
     Card
   },
   methods: {
-    payClicked(callback) {
-      this.$emit('open-modal', callback)
+    btnClicked(opts={}) {
+      this.$emit('open-modal', opts)
     }
   }
 };

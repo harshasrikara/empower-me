@@ -3,6 +3,10 @@
   Header
   hello-world(@open-modal='openModal')
   Modal(v-if='showModal' @close='modalClose')
+    template(v-if="desc && imageSrc" slot="header") More Info
+    template(v-if="desc && imageSrc" slot="body")
+      img(:src="imageSrc")
+      p {{ desc }}
 </template>
 
 <script>
@@ -20,20 +24,31 @@ export default {
   data() {
     return  {
       showModal: false,
-      callback: function() {}
+      callback: function() {},
+      desc: '',
+      imageSrc: ''
     }
   },
   methods: {
-    openModal(callback) {
-      console.log('open')
+    openModal(opts={}) {
+      console.log(opts)
       this.showModal = true
-      if (callback && typeof callback === 'function') {
-        this.callback = callback
+      if (opts.callback && typeof opts.callback === 'function') {
+        this.callback = opts.callback
+      }
+      if (opts.description) {
+        this.desc = opts.description
+      }
+      if (opts.image) {
+        this.imageSrc = opts.image
       }
     },
     modalClose() {
       this.showModal = false
       this.callback()
+      this.callback = function() {}
+      this.desc = ''
+      this.imageSrc = ''
     }
   }
 }
