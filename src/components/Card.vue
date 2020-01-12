@@ -53,12 +53,16 @@ export default {
   methods: {
     payClicked() {
       this.$emit('pay-clicked', { callback: async () => {
-        const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/stripe/?description=${this.description}&amount=${this.amount}`
-        // const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
+        const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/stripe/?description=books&amount=10`
+        const url2 = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value="you have received payment for ${this.description}"`
         const response = await fetch(url)
+        const response2 = await fetch(url2)
         console.log(response)
+        console.log(response2)
         const json = await response.json()
+        const json2 = await response2.json()
         console.log(json)
+        console.log(json2)
       }})
     }
   }

@@ -91,14 +91,17 @@ export default {
 .modal-header {
   background-color: #42b983;
   width: 100%;
-  height: 30px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-body {
-  margin: 20px 0;
+  font-size: 150%;
+  line-height:150%;
+  margin: 20px;
+  padding: 40px;
 }
 
 .modal-default-button {
