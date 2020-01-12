@@ -46,6 +46,21 @@ export default {
           image: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1',
           title: 'Gym Membership',
           description: `Academics and studying are not the only relevant items during college. It is also important to maintain a fit lifestyle to promote better health and stamina. Being healthy will prevent sickness and allow a student to be more effective in their other pursuits. More over, a membership near the university will allow the student access to high quality resources and equipment that will facilitate faster growth and improvements over time.`
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d',
+          title: 'Music',
+          description: `Music can raise someone’s mood, get them excited, or make them calm and relaxed. Music also - and this is important - allows us to feel nearly or possibly all emotions that we experience in our lives. ... It is an important part of their lives and fills a need or an urge to create music. Performing music involves intense physical coordination in performing an instrument alone or with others, while reading musical notation, and adding delicate or strong nuanced changes to the music that only a performer can bring. In general, to an amateur musician, music can provide an escape from everyday life or an alternative means of expressing one’s own capabilities. Thus, it is important to not neglect the importance of including musical studies for a student in their education.`
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1521412644187-c49fa049e84d',
+          title: 'Sports',
+          description: `Taking part in sports is important as it reduces stress and enhances their mood. It builds healthy bones and muscles, increases fitness, improves sleep, helps them socialize, improves their cooperation skills, boosts self-confidence and lowers the risk of getting obese. Sports gives us a good exercise which makes us Physically strong and increases our stamina and strength. Regular Sports activities make us active and lead to good Health. Participation in sports has also been linked towards better grades, talent and GPA. Thus, it is vital that sports are a part of a student’s life.`
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1498079022511-d15614cb1c02',
+          title: 'Tuition',
+          description: `Tuition is the price of college, which includes classes, food, housing, books and more. Did you know that the rise in tuition is growing faster than inflation. Inflation is how the price of money rises and falls. College costs should not be higher than the price of money in the economy. We think everyone should be able to afford college without regretting it for the rest of their lives because they would have so much student debt. It would be greatly appreciated if you helped pay for college’s high tuition rates. Education is vital towards empowering a student to have a successful life and take better steps. It also allows them to spread their knowledge in the economy by working and applying their knowledge towards the improvement of the economy’s lifestyle.`
         }
       ]
     }
