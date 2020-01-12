@@ -1,7 +1,6 @@
 <template lang="pug">
 #app
   Header
-  img(alt='Vue logo' src='./assets/logo.png')
   hello-world(@open-modal='openModal')
   Modal(v-if='showModal' @close='modalClose')
 </template>

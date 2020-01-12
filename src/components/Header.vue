@@ -1,6 +1,7 @@
+
 <template>
     <div class="header">
-        <h1 class="firstLink">Text</h1>
+        <vue-button class="firstLink">About</vue-button>
         <progress-bar size="medium" val="60" text="60"></progress-bar>
     </div>
 </template>
@@ -19,11 +20,20 @@ export default {
     display: flex;
     width: 100%;
     height: 50px;
-    background-color: lightgray;
+    background-color: #42b983;
     margin-bottom: 60px;
 }
 .firstLink {
     margin: 0 0 0 20px;
+    background-color: lightgray;
     align-self: center;
+}
+.firstLink:hover {
+    background-color: white;
+    color: green;
+}
+
+.right {
+    float: right;
 }
 </style>

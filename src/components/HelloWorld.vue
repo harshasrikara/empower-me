@@ -27,6 +27,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 3%;
 }
 .card {
   padding-bottom: 15px;
