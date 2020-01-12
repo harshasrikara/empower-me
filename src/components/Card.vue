@@ -12,13 +12,28 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button>Action</md-button>
-          <md-button>Action</md-button>
+          <md-button>More Info</md-button>
+          <md-button @click="payClicked()">Pay</md-button>
         </md-card-actions>
       </md-ripple>
     </md-card>
   </div>
 </template>
+
+<script>
+/* eslint-disable */
+export default {
+  methods: {
+    async payClicked() {
+      const url = `https://harshasrikara.api.stdlib.com/nwhacks-test@dev/sendmessage/?value=${Math.floor(Math.random()*100)}`
+      const response = await fetch(url)
+      console.log(response)
+      const json = await response.json()
+      console.log(json)
+    }
+  }
+}
+</script>
 
 <style scoped>
   .md-card {
@@ -28,9 +43,3 @@
     vertical-align: top;
   }
 </style>
-
-<script>
-export default {
-  name: 'RegularCards'
-}
-</script>
