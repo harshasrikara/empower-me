@@ -3,8 +3,6 @@
     <template v-for="index in 10">
       <Card :key="index"></Card>
     </template>
-    <!-- <Card></Card>
-    <Card></Card> -->
   </div>
 </template>
 
