@@ -1,4 +1,5 @@
 # team-awesome
+Submitted project entitled empower me at nwHacks2020
 
 ## Project setup
 ```
